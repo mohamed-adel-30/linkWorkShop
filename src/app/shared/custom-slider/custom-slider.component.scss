@@ -1,0 +1,38 @@
+.slider {
+  owl-carousel-o {
+    ::ng-deep .owl-item {
+      img {
+        padding: 10% !important;
+        @media (min-width: 769px) {
+          padding: 30% !important;
+        }
+      }
+    }
+    ::ng-deep .owl-nav {
+      display: none !important;
+    }
+  }
+  position: relative;
+  .prev {
+    position: absolute;
+    top: 35%;
+    left: -15px;
+    width: 35px;
+    z-index: 1;
+    cursor: pointer;
+    @media (min-width: 769px) {
+      width: 50px;
+    }
+  }
+  .next {
+    position: absolute;
+    top: 35%;
+    right: -15px;
+    width: 35px;
+    z-index: 1;
+    cursor: pointer;
+    @media (min-width: 769px) {
+      width: 50px;
+    }
+  }
+}

@@ -1,0 +1,207 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-white">
+  <button
+    class="navbar-toggler d-lg-none"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavId"
+    aria-controls="collapsibleNavId"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    (click)="isCollapsed = !isCollapsed"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#"
+    ><img src="./../../../assets/Group 145.jpg" alt=""
+  /></a>
+
+  <div
+    class="collapse navbar-collapse"
+    id="collapsibleNavId"
+    [collapse]="!isCollapsed"
+    [isAnimated]="false"
+  >
+    <ul class="navbar-nav text-right text-md-left ml-auto mt-2 p-0 mt-lg-0">
+      <li
+        class="nav-item d-sm-flex d-md-none"
+        [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
+        (click)="isCollapsed = !isCollapsed"
+      >
+        <h2 class="nav-link">القائمة الرئيسية</h2>
+      </li>
+      <li
+        class="nav-item dropdown"
+        [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
+      >
+        <a
+          class="nav-link d-flex justify-content-between align-items-center"
+          href="#"
+          id="dropdownId"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [ngStyle]="{
+            'border-bottom': openSubMenu
+              ? 'rgba(255, 255, 255, 0.2) solid 1px'
+              : 'none'
+          }"
+          (click)="openSubMenu = !openSubMenu"
+        >
+          <p class="m-0 px-1">عن الهيئة</p>
+          <span
+            ><img
+              class="d-none d-md-flex"
+              src="../../../assets/icons/Icon ionic-ios-arrow-down.jpg"
+              alt=""
+            />
+            <img
+              class="d-flex d-md-none"
+              src="../../../assets/icons/Path 729.png"
+              alt=""
+            />
+          </span>
+        </a>
+        <div class="dropdown-menu text-right" aria-labelledby="dropdownId">
+          <a
+            class="dropdown-item"
+            (click)="isCollapsed = !isCollapsed"
+            (click)="getMenuBack()"
+            href="#"
+            >من نحن؟</a
+          >
+          <a
+            class="dropdown-item"
+            (click)="isCollapsed = !isCollapsed"
+            (click)="getMenuBack()"
+            href="#"
+            >رؤية</a
+          >
+          <a
+            class="dropdown-item"
+            (click)="isCollapsed = !isCollapsed"
+            (click)="getMenuBack()"
+            href="#"
+            >خدمات</a
+          >
+          <a
+            class="dropdown-item"
+            (click)="isCollapsed = !isCollapsed"
+            (click)="getMenuBack()"
+            href="#"
+            >إستراتيجية</a
+          >
+          <a
+            class="dropdown-item"
+            (click)="isCollapsed = !isCollapsed"
+            (click)="getMenuBack()"
+            href="#"
+            >الأهداف</a
+          >
+        </div>
+      </li>
+      <li
+        class="nav-item dropdown"
+        [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
+      >
+        <a
+          class="nav-link d-flex justify-content-between align-items-center"
+          href="#"
+          id="dropdownId"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [ngStyle]="{
+            'border-bottom': openSubMenu
+              ? 'rgba(255, 255, 255, 0.2) solid 1px'
+              : 'none'
+          }"
+          (click)="openSubMenu = !openSubMenu"
+        >
+          <p class="m-0 px-1">المركز الاعلامي</p>
+          <span
+            ><img
+              class="d-none d-md-flex"
+              src="../../../assets/icons/Icon ionic-ios-arrow-down.jpg"
+              alt=""
+            />
+            <img
+              class="d-flex d-md-none"
+              src="../../../assets/icons/Path 729.png"
+              alt=""
+            />
+          </span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownId">
+          <a
+            class="dropdown-item"
+            (click)="isCollapsed = !isCollapsed"
+            (click)="getMenuBack()"
+            href="#"
+            >Action 1</a
+          >
+          <a
+            class="dropdown-item"
+            (click)="isCollapsed = !isCollapsed"
+            (click)="getMenuBack()"
+            href="#"
+            >Action 2</a
+          >
+        </div>
+      </li>
+      <li
+        class="nav-item"
+        [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
+      >
+        <a class="nav-link" (click)="isCollapsed = !isCollapsed" href="#"
+          >المستشفيات</a
+        >
+      </li>
+    </ul>
+    <!-- <a class="navbar-brand d-md-none d-sm-block" href="#"
+      ><img src="./../../../assets/Group 145.jpg" alt=""
+    /></a> -->
+
+    <div class="social-wrapper d-flex">
+      <div
+        class="social py-4 px-3 p-md-0 p-lg-3"
+        [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
+      >
+        <a href="">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href=""><i class="fab fa-twitter"></i> </a>
+      </div>
+    </div>
+    <div
+      class="lang-wrapper py-4 px-3 p-md-0 p-lg-3"
+      [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
+    >
+      <div class="lang">
+        <button
+          (click)="selectArabic()"
+          [ngClass]="{ 'active-btn': language == ar }"
+        >
+          {{ ar }}
+        </button>
+        <button
+          (click)="selectEnglish()"
+          [ngClass]="{ 'active-btn': language == en }"
+        >
+          {{ en }}
+        </button>
+      </div>
+    </div>
+    <div class="mobileNav fixed-bottom d-lg-none d-md-none">
+      <ul class="navbar-nav p-0 bottom-nav bg-dark text-white">
+        <li class="nav-item"><i class="fas fa-ellipsis-h fa-2x"></i></li>
+        <li class="nav-item"><i class="far fa-user fa-2x"></i></li>
+        <li class="nav-item"><i class="far fa-bell fa-2x"></i></li>
+        <li class="nav-item">
+          <img src="../../../assets/icons/dashboard (1).png" alt="" />
+        </li>
+
+        <li class="nav-item"><i class="fas fa-home fa-2x"></i></li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,22 @@
+<div class="slider" *ngIf="sliderArr">
+  <owl-carousel-o [options]="customOptions" #owlCar>
+    <ng-container *ngFor="let slide of sliderArr; let i = index">
+      <ng-template carouselSlide [id]="i + 1">
+        <img [src]="slide.image" [alt]="slide" />
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+  <img
+    src="../../../assets/icons/Group 18.png"
+    (click)="owlCar.prev()"
+    class="prev"
+    alt=""
+  />
+
+  <img
+    class="next"
+    (click)="owlCar.next()"
+    src="../../../assets/icons/Group 19.png"
+    alt=""
+  />
+</div>
