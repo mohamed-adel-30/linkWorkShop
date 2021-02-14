@@ -14,7 +14,14 @@ export class HomeComponent implements OnInit {
     { image: 'assets/home/importantSites/tower.png' },
     { image: 'assets/home/importantSites/asgardia.png' },
   ];
-
+  partners = [
+    { image: '../../../../assets/home/partners/earth.png' },
+    { image: 'assets/home/partners/fox-hub-2.png' },
+    { image: 'assets/home/partners/lighting.png' },
+    { image: 'assets/home/partners/atica.png' },
+    { image: 'assets/home/partners/leaf.png' },
+  ];
+  partnerHeader = 'شركاء الهيئة';
   vipHeader = 'مواقع تهمك';
   constructor() {}
 

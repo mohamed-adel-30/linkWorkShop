@@ -2,10 +2,9 @@
   owl-carousel-o {
     ::ng-deep .owl-item {
       img {
-        padding: 10% !important;
-        @media (min-width: 769px) {
-          padding: 30% !important;
-        }
+        height: 100px;
+        padding: 20px;
+        object-fit: contain;
       }
     }
     ::ng-deep .owl-nav {

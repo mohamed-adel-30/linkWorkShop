@@ -1,8 +1,14 @@
-<section class="hero">
+<section class="hero py-0">
   <app-hero></app-hero>
 </section>
 <main>
-  <section class="bg-light">
+  <section class="partners spacing">
+    <app-partner-slider
+      [slider]="partners"
+      [h3]="partnerHeader"
+    ></app-partner-slider>
+  </section>
+  <section class="bg-light important-sites spacing">
     <app-partner-slider
       [slider]="vipWebsites"
       [h3]="vipHeader"

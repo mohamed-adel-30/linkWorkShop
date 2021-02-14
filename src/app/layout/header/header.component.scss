@@ -16,6 +16,22 @@ nav {
     position: fixed;
     margin: 20px 5%;
     padding: 8px 16px;
+    .dropdown {
+      .after::after {
+        display: none !important;
+      }
+      &:hover {
+        .dropdown-menu {
+          display: block;
+          .show {
+            display: block;
+          }
+        }
+        .after::after {
+          display: block;
+        }
+      }
+    }
   }
 
   .navbar-toggler {
