@@ -28,6 +28,21 @@
       }
     }
 
+    .meeting-container {
+      ::ng-deep .owl-theme .owl-dots .owl-dot {
+        span {
+          background: #869791 !important;
+          border: 1px solid black !important;
+        }
+      }
+      ::ng-deep .owl-theme .owl-dots .owl-dot.active {
+        span {
+          background: #d6d6d6 !important;
+          border: 1px solid black !important;
+        }
+      }
+    }
+
     .meetings-wrapper {
       display: flex;
       flex-direction: column;
