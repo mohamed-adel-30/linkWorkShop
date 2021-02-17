@@ -1,0 +1,43 @@
+<div class="slider">
+  <owl-carousel-o
+    [options]="meetingsArr ? meetingsOptions : statisticsOptions"
+    #owlCar
+  >
+    <ng-container *ngFor="let statistc of statisticsArr">
+      <ng-template *ngIf="statisticsArr" carouselSlide>
+        <div class="statistics-wrapper">
+          <img src="{{ statistc.img }}" alt="" />
+          <span>{{ statistc.count }}</span>
+          <span>{{ statistc.name }}</span>
+        </div>
+      </ng-template>
+    </ng-container>
+
+    <ng-container class="hello" *ngFor="let meeting of meetingsArr">
+      <ng-template *ngIf="meetingsArr" carouselSlide>
+        <div class="meetings-wrapper">
+          <div class="meeting-img">
+            <img src="{{ meeting.img }}" alt="" />
+          </div>
+          <div class="meeting-details">
+            <span class="bg-light w-50 p-1 ml-auto">{{ meeting.date }}</span>
+            <h4 class="py-3">{{ meeting.title }}</h4>
+            <div class="details mb-4">
+              <a class="tel pb-2" href="tel:0109 529 5009">
+                <p>{{ meeting.loc }}</p>
+                <i class="fas fa-phone-square"></i>
+              </a>
+              <a class="loc pb-2" href="">
+                <p>{{ meeting.from }} - {{ meeting.to }}</p>
+                <i class="fas fa-map-marker-alt"></i>
+              </a>
+            </div>
+            <a class="py-1" href="">
+              <i class="fas graientIcon px-3 fa-arrow-circle-left"></i>المزيد</a
+            >
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>

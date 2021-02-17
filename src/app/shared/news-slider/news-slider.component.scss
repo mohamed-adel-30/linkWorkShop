@@ -1,0 +1,95 @@
+.slider {
+  owl-carousel-o {
+    ::ng-deep .owl-nav {
+      display: none !important;
+    }
+  }
+  .card {
+    margin: 15px;
+    box-shadow: 0px 3px 6px #00000029;
+
+    h4 {
+      font-size: 18px !important;
+      font-weight: bold;
+      min-height: 50px;
+    }
+
+    img {
+      padding-bottom: 1px;
+      border-bottom: 4px solid;
+      border-image: linear-gradient(86deg, #21cad4, #96db68);
+      border-image-slice: 1;
+    }
+    span {
+      border-radius: 21px;
+      font-size: 12px;
+    }
+
+    .graientIcon {
+      background: -moz-linear-gradient(top, #21cad4, #96db68);
+      background: -webkit-linear-gradient(top, #21cad4, #96db68);
+      background: linear-gradient(to bottom, #21cad4, #96db68);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @media (min-width: 768px) {
+      .card-text {
+        min-height: 120px;
+      }
+    }
+  }
+  position: relative;
+  .prev {
+    position: absolute;
+    top: 20%;
+    left: -15px;
+    width: 35px;
+    z-index: 1;
+    cursor: pointer;
+    @media (min-width: 769px) {
+      width: 50px;
+    }
+  }
+  .next {
+    position: absolute;
+    top: 20%;
+    right: -15px;
+    width: 35px;
+    z-index: 1;
+    cursor: pointer;
+    @media (min-width: 769px) {
+      width: 50px;
+    }
+  }
+
+  .hospital-card {
+    margin: 3px;
+    border: none;
+    border-right: 4px solid;
+    border-image: linear-gradient(to bottom, #21cad4, #96db68);
+    border-image-slice: 1;
+    h4 {
+      font-size: 16px !important;
+      min-height: 60px !important;
+    }
+    .details {
+      .tel,
+      .loc {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        p {
+          font-size: 10px;
+          padding: 0 5px;
+          margin: 0;
+        }
+        i {
+          color: #21cad4;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.header {
+  .after {
+    &::after {
+      right: 47%;
+      width: 58px;
+      top: 40px;
+      left: 43%;
+      @media (min-width: 768px) {
+        left: 46%;
+        top: 50px;
+      }
+      @media (min-width: 992px) {
+        left: 47%;
+        top: 60px;
+      }
+    }
+  }
+}
+.seeMore {
+  .after {
+    &::after {
+      right: 47%;
+      width: 105px;
+      top: 25px;
+      left: 11%;
+    }
+  }
+}

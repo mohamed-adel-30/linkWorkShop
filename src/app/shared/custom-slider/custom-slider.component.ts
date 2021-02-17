@@ -18,11 +18,11 @@ export class CustomSliderComponent implements OnInit {
     items: 6,
     navText: ['', ''],
     // responsive: {
-    //   600: {
-    //     items: 2,
+    //   0: {
+    //     items: 1,
     //   },
-    //   900: {
-    //     items: 6,
+    //   600: {
+    //     items: 3,
     //   },
     // },
     nav: true,

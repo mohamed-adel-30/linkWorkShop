@@ -1,0 +1,100 @@
+.slider {
+  owl-carousel-o {
+    ::ng-deep .owl-item {
+      img {
+        height: 100px;
+        padding: 20px;
+        object-fit: contain;
+      }
+    }
+    ::ng-deep .owl-nav {
+      display: none !important;
+    }
+    ::ng-deep .owl-theme .owl-dots .owl-dot {
+      span {
+        background: #869791 !important;
+      }
+    }
+    ::ng-deep .owl-theme .owl-dots .owl-dot.active {
+      span {
+        background: #d6d6d6 !important;
+      }
+    }
+    .statistics-wrapper {
+      display: flex;
+      flex-direction: column;
+      span {
+        color: #ffffff;
+      }
+    }
+
+    .meetings-wrapper {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      margin: 10px;
+      background-color: white;
+
+      @media (min-width: 768px) {
+        flex-direction: row-reverse;
+      }
+      .meeting-img {
+        width: 100%;
+        @media (min-width: 768px) {
+          width: 50%;
+        }
+        img {
+          height: 100%;
+          object-fit: fill;
+          padding: 0;
+        }
+      }
+
+      .meeting-details {
+        width: 100%;
+        padding: 10px;
+        @media (min-width: 768px) {
+          width: 50%;
+        }
+
+        span {
+          border-radius: 21px;
+          font-size: 12px;
+        }
+        h4 {
+          font-size: 16px !important;
+          min-height: 126px !important;
+          @media (min-width: 769px) {
+            min-height: 90px !important;
+          }
+        }
+        .details {
+          .tel,
+          .loc {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            p {
+              font-size: 10px;
+              padding: 0 5px;
+              margin: 0;
+            }
+            i {
+              color: #21cad4;
+            }
+          }
+        }
+        .graientIcon {
+          background: -moz-linear-gradient(top, #21cad4, #96db68);
+          background: -webkit-linear-gradient(top, #21cad4, #96db68);
+          background: linear-gradient(to bottom, #21cad4, #96db68);
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
