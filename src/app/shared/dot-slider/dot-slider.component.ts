@@ -38,6 +38,9 @@ export class DotSliderComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
+        items: 1,
+      },
+      600: {
         items: 2,
       },
     },

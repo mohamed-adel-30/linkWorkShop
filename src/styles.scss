@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "./app/shared/style/colors.scss";
+
 @font-face {
   font-family: myFirstFont;
   src: url(./assets/fonts/din-next-lt-w23-regular.ttf);
@@ -21,7 +24,13 @@ h3,
 h4,
 p,
 span {
-  color: #033463;
+  color: $mainColor;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
 }
 @media (max-width: 768px) {
   h1 {
@@ -45,7 +54,7 @@ a:hover {
 }
 .spec-btn {
   border-radius: 24px;
-  background-color: #033463;
+  background-color: $mainColor;
   border: none;
   color: #ffffff;
 }
@@ -65,7 +74,7 @@ a:hover {
     top: 30px;
     position: absolute;
     border-radius: 2px;
-    background-image: linear-gradient(86deg, #21cad4, #96db68);
+    background-image: $borderColor;
     right: 43.5%;
     left: 43.5%;
     @media (min-width: 768px) {
