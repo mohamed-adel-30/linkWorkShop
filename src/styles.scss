@@ -64,7 +64,11 @@ a:hover {
     padding: 50px 0;
   }
 }
-
+.slider {
+  .owl-carousel {
+    z-index: 0;
+  }
+}
 .after {
   position: relative;
   &::after {

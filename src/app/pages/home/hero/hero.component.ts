@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.scss'],
   styles: [
     `
+      :host >>> .carousel {
+        z-index: 3;
+      }
       :host >>> .carousel-control span {
         /* font-size: 80px;
         color: #c8ff00;

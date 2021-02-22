@@ -1,19 +1,8 @@
 header {
   app-header {
     // position: static;
-    z-index: 99999;
+    // z-index: 99999;
     width: 100%;
-    @media (min-width: 600px) {
-      // position: fixed;
-    }
-  }
-  app-fixed-header {
-    // position: fixed;
-    z-index: 999;
-    width: 100%;
-    @media (max-width: 600px) {
-      display: none;
-    }
   }
 }
 footer {

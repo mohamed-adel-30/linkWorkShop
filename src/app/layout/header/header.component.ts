@@ -24,9 +24,7 @@ export class HeaderComponent implements OnInit {
     console.log(e.target.nextSibling, e.target.previousSibling);
   }
   getMenuBack() {
-    setTimeout(() => {
-      this.openSubMenu = false;
-    }, 1000);
+    this.openSubMenu = false;
   }
 
   selectArabic() {
