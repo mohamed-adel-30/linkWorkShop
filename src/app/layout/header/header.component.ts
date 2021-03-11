@@ -15,22 +15,19 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  showSubMenu(e) {
-    // if (e.target.nextSibling.style.display == 'none') {
-    //   e.target.nextSibling.style.display = 'flex';
-    // } else if (e.target.nextSibling.style.display == 'flex') {
-    //   e.target.nextSibling.style.display = 'none';
-    // }
-    console.log(e.target.nextSibling, e.target.previousSibling);
-  }
+
   getMenuBack() {
     this.openSubMenu = false;
+    this.isCollapsed = !this.isCollapsed;
   }
 
-  selectArabic() {
-    this.language = this.ar;
-  }
-  selectEnglish() {
-    this.language = this.en;
+  selectlang(lang) {
+    console.log(lang.title);
+
+    if (lang.title == 'arabic') {
+      this.language = this.ar;
+    } else if (lang.title == 'english') {
+      this.language = this.en;
+    }
   }
 }

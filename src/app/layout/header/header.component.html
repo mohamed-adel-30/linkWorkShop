@@ -21,7 +21,9 @@
     [collapse]="!isCollapsed"
     [isAnimated]="false"
   >
-    <ul class="navbar-nav text-right text-md-left ml-auto mt-2 p-0 mt-lg-0">
+    <ul
+      class="navbar-nav text-right text-md-left mr-lg-3 ml-auto mt-2 p-0 mt-lg-0"
+    >
       <li
         class="nav-item d-sm-flex d-md-none"
         [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
@@ -62,41 +64,13 @@
           </span>
         </a>
         <div class="dropdown-menu text-right" aria-labelledby="dropdownId">
-          <a
-            class="dropdown-item"
-            (click)="isCollapsed = !isCollapsed"
-            (click)="getMenuBack()"
-            href="#"
-            >من نحن؟</a
-          >
-          <a
-            class="dropdown-item"
-            (click)="isCollapsed = !isCollapsed"
-            (click)="getMenuBack()"
-            href="#"
-            >رؤية</a
-          >
-          <a
-            class="dropdown-item"
-            (click)="isCollapsed = !isCollapsed"
-            (click)="getMenuBack()"
-            href="#"
-            >خدمات</a
-          >
-          <a
-            class="dropdown-item"
-            (click)="isCollapsed = !isCollapsed"
-            (click)="getMenuBack()"
-            href="#"
+          <a class="dropdown-item" (click)="getMenuBack()" href="#">من نحن؟</a>
+          <a class="dropdown-item" (click)="getMenuBack()" href="#">رؤية</a>
+          <a class="dropdown-item" (click)="getMenuBack()" href="#">خدمات</a>
+          <a class="dropdown-item" (click)="getMenuBack()" href="#"
             >إستراتيجية</a
           >
-          <a
-            class="dropdown-item"
-            (click)="isCollapsed = !isCollapsed"
-            (click)="getMenuBack()"
-            href="#"
-            >الأهداف</a
-          >
+          <a class="dropdown-item" (click)="getMenuBack()" href="#">الأهداف</a>
         </div>
       </li>
       <li
@@ -132,37 +106,22 @@
           </span>
         </a>
         <div class="dropdown-menu text-right" aria-labelledby="dropdownId">
-          <a
-            class="dropdown-item"
-            (click)="isCollapsed = !isCollapsed"
-            (click)="getMenuBack()"
-            href="#"
-          >
+          <a class="dropdown-item" (click)="getMenuBack()" href="#">
             أخر الأخبار</a
           >
-          <a
-            class="dropdown-item"
-            (click)="isCollapsed = !isCollapsed"
-            (click)="getMenuBack()"
-            href="#"
-            >الأحداث</a
-          >
-          <a
-            class="dropdown-item"
-            (click)="isCollapsed = !isCollapsed"
-            (click)="getMenuBack()"
-            href="#"
+          <a class="dropdown-item" (click)="getMenuBack()" href="#">الأحداث</a>
+          <a class="dropdown-item" (click)="getMenuBack()" href="#"
             >صور و فيديوهات</a
           >
         </div>
       </li>
       <li
-        class="nav-item py-lg-3 py-md-2"
+        class="nav-item py-lg-3 d-flex align-items-center py-md-2"
         [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
       >
-        <a class="nav-link" (click)="isCollapsed = !isCollapsed" href="#"
-          >المستشفيات</a
-        >
+        <a class="nav-link" (click)="isCollapsed = !isCollapsed" href="#">
+          <p class="m-0">المستشفيات</p>
+        </a>
       </li>
     </ul>
     <!-- <a class="navbar-brand d-md-none d-sm-block" href="#"
@@ -181,18 +140,22 @@
       </div>
     </div>
     <div
-      class="lang-wrapper py-4 px-3 p-md-0 p-lg-0"
+      class="lang-wrapper py-4 px-3 p-md-0 p-lg-0 mr-lg-3"
       [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
     >
       <div class="lang">
         <button
-          (click)="selectArabic()"
+          #langA
+          title="arabic"
+          (click)="selectlang(langA)"
           [ngClass]="{ 'active-btn': language == ar }"
         >
           {{ ar }}
         </button>
         <button
-          (click)="selectEnglish()"
+          #langE
+          title="english"
+          (click)="selectlang(langE)"
           [ngClass]="{ 'active-btn': language == en }"
         >
           {{ en }}
@@ -213,6 +176,8 @@
     </div>
   </div>
 </nav>
+
+<!-- fixed navbar -->
 
 <nav class="navbar navbar-expand-sm fixed-nav py-0 navbar-light">
   <button
@@ -237,7 +202,9 @@
     [collapse]="!isCollapsed"
     [isAnimated]="false"
   >
-    <ul class="navbar-nav text-right text-md-left ml-auto mt-2 p-0 mt-lg-0">
+    <ul
+      class="navbar-nav text-right text-md-left mr-lg-3 ml-auto mt-2 p-0 mt-lg-0"
+    >
       <li
         class="nav-item d-sm-flex d-md-none"
         [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
@@ -394,18 +361,22 @@
       </div>
     </div>
     <div
-      class="lang-wrapper py-4 px-3 p-md-0 p-lg-0"
+      class="lang-wrapper py-4 px-3 p-md-0 p-lg-0 mr-lg-3"
       [ngClass]="{ hide: openSubMenu, show: !openSubMenu }"
     >
       <div class="lang">
         <button
-          (click)="selectArabic()"
+          #langA
+          title="arabic"
+          (click)="selectlang(langA)"
           [ngClass]="{ 'active-btn': language == ar }"
         >
           {{ ar }}
         </button>
         <button
-          (click)="selectEnglish()"
+          #langE
+          title="english"
+          (click)="selectlang(langE)"
           [ngClass]="{ 'active-btn': language == en }"
         >
           {{ en }}

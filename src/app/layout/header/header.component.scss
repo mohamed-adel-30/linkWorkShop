@@ -5,23 +5,31 @@ nav {
   margin: 0 auto;
   direction: rtl;
   z-index: 9999;
-  position: static;
+  position: fixed;
   background-color: #ffffff;
   padding: 8px 0;
   .navbar-brand {
-    width: 100px;
     img {
-      width: 100%;
+      width: 100px;
+      height: 39px;
     }
   }
   @media screen and (min-width: 768px) {
-    width: 90%;
+    width: 80%;
     position: absolute;
-    margin: 20px 5%;
+    margin: 20px 10%;
     padding: 8px 16px;
-    a {
-      color: $mainColor !important;
+    .navbar-brand {
+      img {
+        width: 100px;
+        height: 50px;
+      }
     }
+    a {
+      color: #1a325e !important;
+      font-weight: 500;
+    }
+
     .dropdown {
       &::after {
         content: "";
@@ -40,9 +48,13 @@ nav {
         padding-left: 5px;
         padding-right: 5px;
         top: 93%;
+        border-radius: 0;
         a {
           padding: 5px;
           border-bottom: #d5d5d5 solid 1px;
+          color: #033463;
+          font-size: 18px;
+          font-weight: normal;
           &:last-child {
             border-bottom: none;
           }
@@ -67,6 +79,12 @@ nav {
     }
   }
   @media (min-width: 992px) {
+    .navbar-brand {
+      img {
+        width: 217px;
+        height: 89px;
+      }
+    }
     .dropdown {
       &::after {
         content: "";
@@ -169,6 +187,7 @@ nav {
     .social {
       direction: ltr;
       text-align: right;
+      display: flex;
       a {
         padding: 0 7px;
         i {
@@ -200,7 +219,7 @@ nav {
     button {
       border: none;
       border-radius: 24px;
-      padding: 5px 8px;
+      padding: 0 8px;
       background-color: transparent;
 
       @media (min-width: 600px) {
