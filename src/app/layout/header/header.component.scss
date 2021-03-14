@@ -12,6 +12,18 @@ nav {
     img {
       width: 100px;
       height: 39px;
+      @media (min-width: 768px) {
+        width: 100px;
+        height: 50px;
+      }
+      @media (min-width: 992px) {
+        width: 185px;
+        height: 75px;
+      }
+      @media (min-width: 1200px) {
+        width: 217px;
+        height: 89px;
+      }
     }
   }
   @media screen and (min-width: 768px) {
@@ -19,12 +31,7 @@ nav {
     position: absolute;
     margin: 20px 10%;
     padding: 8px 16px;
-    .navbar-brand {
-      img {
-        width: 100px;
-        height: 50px;
-      }
-    }
+  
     a {
       color: #1a325e !important;
       font-weight: 500;
@@ -79,12 +86,7 @@ nav {
     }
   }
   @media (min-width: 992px) {
-    .navbar-brand {
-      img {
-        width: 217px;
-        height: 89px;
-      }
-    }
+ 
     .dropdown {
       &::after {
         content: "";
@@ -167,6 +169,12 @@ nav {
       justify-content: space-between;
       li {
         padding: 10px;
+        .icon-dashboard-1{
+          &::before{
+            font-size: 30px;
+          }
+
+        }
       }
     }
   }
@@ -204,6 +212,15 @@ nav {
           @media (min-width: 600px) {
             border-color: #1a325e;
           }
+        }
+        @media screen and (min-width:768px) and (max-width:992px){
+            padding: 0 4px;
+
+            i{
+              width: 30px;
+              height: 30px;
+            }
+          
         }
       }
     }
