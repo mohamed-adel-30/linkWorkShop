@@ -1,4 +1,5 @@
 .slider {
+  position: relative;
   owl-carousel-o {
     ::ng-deep .owl-item {
       img {
@@ -11,27 +12,43 @@
       display: none !important;
     }
   }
-  position: relative;
   .prev {
     position: absolute;
     top: 35%;
+    display: none;
     left: -15px;
     width: 35px;
     z-index: 1;
     cursor: pointer;
     @media (min-width: 769px) {
       width: 50px;
+      display: block;
     }
   }
   .next {
     position: absolute;
     top: 35%;
+    display: none;
     right: -15px;
     width: 35px;
     z-index: 1;
     cursor: pointer;
     @media (min-width: 769px) {
       width: 50px;
+      display: block;
     }
   }
+  // @media (max-width: 600px) {
+  //   .mob-overlay {
+  //     position: absolute;
+  //     top: 1rem;
+  //     bottom: 1rem;
+  //     right: 90%;
+  //     left: 0;
+  //     background: transparent
+  //       linear-gradient(270deg, #00000000 0%, #00000081 100%) 0% 0% no-repeat
+  //       padding-box;
+  //     opacity: 1;
+  //   }
+  // }
 }

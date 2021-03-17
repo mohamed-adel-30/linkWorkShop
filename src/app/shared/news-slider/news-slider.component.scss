@@ -1,17 +1,45 @@
+@import "./../style/colors.scss";
+
 .slider {
   owl-carousel-o {
     ::ng-deep .owl-nav {
       display: none !important;
     }
+    @media (max-width: 600px) {
+      ::ng-deep .owl-item {
+        width: 250px !important;
+      }
+    }
   }
   .card {
     margin: 15px;
     box-shadow: 0px 3px 6px #00000029;
+    border: none;
+    .date {
+      background-color: #f5f5f5;
+      padding: 0.3rem 0.5rem;
+      width: auto;
+      text-align: center;
+      display: inline-block;
+      margin: 1.5rem 0;
+      border-radius: 21px;
+    }
 
     h4 {
-      font-size: 18px !important;
+      // font-size: 18px !important;
       font-weight: bold;
-      min-height: 50px;
+      min-height: 30px;
+      direction: rtl;
+      @media (max-width: 768px) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+    .details {
+      @media (max-width: 600px) {
+        height: 100px;
+      }
     }
 
     img {
@@ -20,11 +48,10 @@
       border-image: linear-gradient(86deg, #21cad4, #96db68);
       border-image-slice: 1;
     }
-    span {
-      border-radius: 21px;
-      font-size: 12px;
-    }
 
+    a {
+      color: $seemoreColor;
+    }
     .graientIcon {
       background: -moz-linear-gradient(top, #21cad4, #96db68);
       background: -webkit-linear-gradient(top, #21cad4, #96db68);
@@ -42,6 +69,7 @@
   }
   position: relative;
   .prev {
+    display: none;
     position: absolute;
     top: 20%;
     left: -15px;
@@ -49,17 +77,22 @@
     z-index: 1;
     cursor: pointer;
     @media (min-width: 769px) {
+      display: block;
       width: 50px;
     }
   }
+
   .next {
+    display: none;
     position: absolute;
     top: 20%;
     right: -15px;
     width: 35px;
     z-index: 1;
+    transform: scaleX(-1);
     cursor: pointer;
     @media (min-width: 769px) {
+      display: block;
       width: 50px;
     }
   }
@@ -70,9 +103,22 @@
     border-right: 4px solid;
     border-image: linear-gradient(to bottom, #21cad4, #96db68);
     border-image-slice: 1;
+    .date {
+      font-size: 1.2rem;
+      width: auto;
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
     h4 {
-      font-size: 16px !important;
-      min-height: 60px !important;
+      // font-size: 16px !important;
+      height: 50px;
+      direction: rtl;
+      @media (max-width: 768px) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
     }
     .details {
       .tel,
@@ -90,6 +136,19 @@
           color: #21cad4;
         }
       }
+    }
+  }
+  @media (max-width: 600px) {
+    .mob-overlay {
+      position: absolute;
+      top: 1rem;
+      bottom: 1rem;
+      right: 90%;
+      left: 0;
+      background: transparent
+        linear-gradient(270deg, #00000000 0%, #00000081 100%) 0% 0% no-repeat
+        padding-box;
+      opacity: 1;
     }
   }
 }

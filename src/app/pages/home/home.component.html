@@ -1,36 +1,34 @@
 <section class="hero py-0">
   <app-hero></app-hero>
 </section>
-<main>
-  <section class="latestNews spacing">
-    <app-latest-news [newsArr]="newsArr"></app-latest-news>
-  </section>
-  <section class="statistics">
-    <app-statistics [statisticsArr]="statisticsArr"></app-statistics>
-  </section>
-  <section class="hospitals spacing">
-    <app-hospitals [hospitals]="hospitals"></app-hospitals>
-  </section>
+<section class="latestNews spacing">
+  <app-latest-news [newsArr]="newsArr"></app-latest-news>
+</section>
+<section class="statistics">
+  <app-statistics [statisticsArr]="statisticsArr"></app-statistics>
+</section>
+<section class="hospitals spacing">
+  <app-hospitals [hospitals]="hospitals"></app-hospitals>
+</section>
 
-  <section class="meetings">
-    <div class="overlay">
-      <app-meetings [meetings]="meetings"></app-meetings>
-    </div>
-  </section>
+<section class="meetings">
+  <div class="overlay">
+    <app-meetings [meetings]="meetings"></app-meetings>
+  </div>
+</section>
 
-  <section class="partners spacing">
-    <app-partner-slider
-      [slider]="partners"
-      [h3]="partnerHeader"
-    ></app-partner-slider>
-  </section>
-  <section class="bg-light important-sites spacing">
-    <app-partner-slider
-      [slider]="vipWebsites"
-      [h3]="vipHeader"
-    ></app-partner-slider>
-  </section>
-</main>
+<section class="partners spacing">
+  <app-partner-slider
+    [slider]="partners"
+    [h3]="partnerHeader"
+  ></app-partner-slider>
+</section>
+<section class="bg-light important-sites spacing">
+  <app-partner-slider
+    [slider]="vipWebsites"
+    [h3]="vipHeader"
+  ></app-partner-slider>
+</section>
 <div class="call d-md-flex d-none">
   <i class="fas fa-phone-alt"></i>
   <a href="tel:0123456">اتصل بنا</a>

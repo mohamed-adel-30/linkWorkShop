@@ -1,12 +1,15 @@
-.container {
+@import "../../shared/style/colors.scss";
+
+.footer {
   direction: rtl;
   text-align: right;
-  .row {
+  .footer-row {
     border-bottom: 1px solid #ffffff;
     padding: 50px 0;
   }
   a {
-    color: #ffffff;
+    color: $darkFont;
+    font-weight: normal;
     i {
       color: #21cad4;
     }
@@ -14,11 +17,9 @@
   .tel,
   .loc {
     display: flex;
-    align-items: center;
 
     p {
-      direction: ltr;
-      color: #ffffff !important;
+      color: $darkFont;
       padding: 0 5px;
       margin: 0;
     }
@@ -41,15 +42,17 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
-        font-size: 20px;
+        font-size: 2rem;
         padding: 6px;
         border: 1px solid #f8f8f8;
         border-radius: 50%;
       }
     }
   }
-}
 
-.icon-pacman:before {
-  content: "\e916";
+  .madeby {
+    p {
+      opacity: 0.6;
+    }
+  }
 }

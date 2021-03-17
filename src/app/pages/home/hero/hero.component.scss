@@ -33,16 +33,15 @@
     //   opacity: 0.9;
     position: relative;
     // width: 100%;
-    font-size: 12px;
     z-index: 6;
     text-align: right;
     p {
-      font-size: 12px;
       hyphens: auto;
+      direction: rtl;
       text-align: justify;
       font-weight: 600;
       @media (min-width: 769px) {
-        font-size: 18px;
+        font-size: 1.6rem;
       }
     }
     span {
@@ -50,17 +49,45 @@
     }
     button {
       width: 100%;
+      padding: 10px 0;
     }
     @media (min-width: 600px) {
       position: absolute;
       top: 40%;
       bottom: 40%;
-      right: 50%;
+      right: 40%;
       left: 10%;
       z-index: 6;
 
+      p {
+        font-size: 1.8rem;
+      }
+      span {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
       button {
         width: auto;
+        padding: 15px 45px;
+        font-size: 1.8rem;
+      }
+    }
+    @media (min-width: 992px) {
+      right: 40%;
+      p {
+        font-size: 2.5rem;
+      }
+      span {
+        font-size: 2rem;
+        margin: 20px 0;
+        display: inline-block;
+      }
+      button {
+        width: auto;
+        padding: 1.5rem 5rem;
+        font-size: 1.8rem;
       }
     }
   }

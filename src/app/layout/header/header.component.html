@@ -2,6 +2,7 @@
   <button
     class="navbar-toggler d-lg-none"
     type="button"
+    title="toggle"
     data-toggle="collapse"
     data-target="#collapsibleNavId"
     aria-controls="collapsibleNavId"
@@ -148,7 +149,7 @@
           #langA
           title="arabic"
           (click)="selectlang(langA)"
-          [ngClass]="{ 'active-btn': language == ar }"
+          [ngClass]="{ 'active-btn': language == 'ar' }"
         >
           {{ ar }}
         </button>
@@ -156,7 +157,7 @@
           #langE
           title="english"
           (click)="selectlang(langE)"
-          [ngClass]="{ 'active-btn': language == en }"
+          [ngClass]="{ 'active-btn': language == 'en' }"
         >
           {{ en }}
         </button>
@@ -183,6 +184,7 @@
   <button
     class="navbar-toggler d-lg-none"
     type="button"
+    title="toggle"
     data-toggle="collapse"
     data-target="#collapsibleNavId"
     aria-controls="collapsibleNavId"
@@ -369,7 +371,7 @@
           #langA
           title="arabic"
           (click)="selectlang(langA)"
-          [ngClass]="{ 'active-btn': language == ar }"
+          [ngClass]="{ 'active-btn': language == 'ar' }"
         >
           {{ ar }}
         </button>
@@ -377,7 +379,7 @@
           #langE
           title="english"
           (click)="selectlang(langE)"
-          [ngClass]="{ 'active-btn': language == en }"
+          [ngClass]="{ 'active-btn': language == 'en' }"
         >
           {{ en }}
         </button>

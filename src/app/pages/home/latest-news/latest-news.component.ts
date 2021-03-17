@@ -7,8 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LatestNewsComponent implements OnInit {
   @Input() newsArr = [];
+  lang: string;
+  dir: string;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.lang = localStorage.getItem('lang');
+    if (this.lang == 'ar') {
+      this.dir = 'rtl';
+    } else {
+      this.dir = 'ltr';
+      this.lang = 'en';
+    }
+  }
 }

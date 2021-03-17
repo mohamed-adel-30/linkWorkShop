@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -240,7 +242,17 @@ export class HomeComponent implements OnInit {
 
   partnerHeader = 'شركاء الهيئة';
   vipHeader = 'مواقع تهمك';
-  constructor() {}
+  lang: string;
+  dir: string;
+  constructor(public translate: TranslateService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.lang = localStorage.getItem('lang');
+    if (this.lang == 'ar') {
+      this.dir = 'rtl';
+    } else {
+      this.dir = 'ltr';
+      this.lang = 'en';
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -21,29 +22,39 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   ],
 })
 export class PartnerSliderComponent implements OnInit {
-  itemsPerSlide = 3;
-  singleSlideOffset = false;
-  noWrap = false;
+  // itemsPerSlide = 3;
+  // singleSlideOffset = false;
+  // noWrap = false;
 
-  slidesChangeMessage = '';
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1,
-      },
-    },
-    nav: true,
-  };
+  // slidesChangeMessage = '';
+  // // customOptions: OwlOptions = {
+  // //   loop: true,
+  // //   mouseDrag: false,
+  // //   touchDrag: false,
+  // //   pullDrag: false,
+  // //   dots: false,
+  // //   navSpeed: 700,
+  // //   navText: ['', ''],
+  // //   responsive: {
+  // //     0: {
+  // //       items: 1,
+  // //     },
+  // //   },
+  // //   nav: true,
+  // // };
   @Input() h3: string;
   @Input() slider: any;
+  lang: string;
+  dir: string;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.lang = localStorage.getItem('lang');
+    if (this.lang == 'ar') {
+      this.dir = 'rtl';
+    } else {
+      this.dir = 'ltr';
+      this.lang = 'en';
+    }
+  }
 }

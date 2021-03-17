@@ -2,9 +2,9 @@
   <owl-carousel-o [options]="customOptions" #owlCar>
     <ng-container *ngFor="let slide of sliderArr; let i = index">
       <ng-template carouselSlide [id]="i + 1">
-        <div class="img-container">
+        <a href="">
           <img [src]="slide.image" [alt]="slide" />
-        </div>
+        </a>
       </ng-template>
     </ng-container>
   </owl-carousel-o>
@@ -21,4 +21,6 @@
     src="../../../assets/icons/Group 19.png"
     alt=""
   />
+
+  <!-- <div class="mob-overlay"></div> -->
 </div>

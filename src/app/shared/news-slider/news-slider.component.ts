@@ -10,11 +10,15 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class NewsSliderComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     navSpeed: 700,
+    lazyLoad: true,
+    lazyLoadEager: 2,
+    autoWidth: false,
+
     // items: 3,
     navText: ['', ''],
     responsive: {
@@ -29,8 +33,8 @@ export class NewsSliderComponent implements OnInit {
   };
   customOptionsHospitals: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     navSpeed: 700,

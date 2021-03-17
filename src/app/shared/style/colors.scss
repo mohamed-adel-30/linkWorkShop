@@ -1,5 +1,7 @@
 $mainColor: #033463;
 $borderColor: linear-gradient(86deg, #21cad4, #96db68);
+$seemoreColor: #21cad4;
+$darkFont: #ffffff;
 
 @mixin iconGradient {
   background: -moz-linear-gradient(top, #21cad4, #96db68);

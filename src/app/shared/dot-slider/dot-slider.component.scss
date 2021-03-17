@@ -1,3 +1,4 @@
+@import "../style/colors.scss";
 .slider {
   owl-carousel-o {
     ::ng-deep .owl-item {
@@ -23,8 +24,21 @@
     .statistics-wrapper {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      img {
+        width: 11.4rem;
+        height: 10.3rem;
+      }
       span {
-        color: #ffffff;
+        color: $darkFont;
+        margin: 0.6rem 0;
+      }
+      .statistics-count {
+        font-size: 1.8rem;
+      }
+      .statistics-name {
+        font-size: 1.2rem;
+        opacity: 0.6;
       }
     }
 
@@ -33,7 +47,7 @@
       flex-direction: column;
       text-align: right;
       margin: 10px;
-      background-color: white;
+      background-color: $darkFont;
 
       @media (min-width: 768px) {
         flex-direction: row-reverse;
@@ -59,16 +73,17 @@
 
         span {
           border-radius: 21px;
-          font-size: 12px;
+          margin: 1.5rem 0;
+          padding: 0.3rem 0.5rem;
         }
         h4 {
-          font-size: 16px !important;
+          // font-size: 16px !important;
           // min-height: 126px !important;
-          @media (min-width: 768px) {
-            min-height: 127px !important;
-          }
-          @media (min-width: 992px) {
-            min-height: 90px !important;
+          direction: rtl;
+          @media (max-width: 1024px) {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
           }
         }
         .details {
@@ -79,7 +94,6 @@
             align-items: center;
 
             p {
-              font-size: 10px;
               padding: 0 5px;
               margin: 0;
             }
@@ -88,7 +102,12 @@
             }
           }
         }
+        a {
+          color: $seemoreColor;
+          display: inline-block;
+        }
         .graientIcon {
+          font-size: 1.8rem;
           background: -moz-linear-gradient(top, #21cad4, #96db68);
           background: -webkit-linear-gradient(top, #21cad4, #96db68);
           background: linear-gradient(to bottom, #21cad4, #96db68);

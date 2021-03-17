@@ -1,3 +1,6 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,9 +11,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { NgModule } from '@angular/core';
 import { PagesModule } from './pages/pages.module';
-// import { CarouselModule } from 'ngx-owl-carousel-o';
-
-// import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
@@ -21,11 +22,21 @@ import { PagesModule } from './pages/pages.module';
     CollapseModule,
     CarouselModule,
     PagesModule,
-    // TNSFontIconModule.forRoot({
-    //   ico: './assets/icomoon.css',
-    // }),
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'ar',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}

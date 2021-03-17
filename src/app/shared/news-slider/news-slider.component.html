@@ -4,14 +4,16 @@
     #owlCar
   >
     <ng-container *ngFor="let news of newsArr">
-      <ng-template *ngIf="newsArr" carouselSlide>
+      <ng-template *ngIf="newsArr" carouselSlide [width]="250">
         <div class="card">
-          <img class="card-img-top" src="{{ news.img }}" alt="" />
+          <a href="">
+            <img class="card-img-top" src="{{ news.img }}" alt="" />
+          </a>
 
           <div class="card-body">
-            <span class="bg-light w-50 p-1 ml-auto">{{ news.date }}</span>
+            <span class="date ml-auto">{{ news.date }}</span>
             <h4 class="">{{ news.title }}</h4>
-            <p class="card-text">
+            <p class="card-text details">
               {{ news.details }}
             </p>
 
@@ -24,16 +26,14 @@
     </ng-container>
 
     <ng-container *ngFor="let hospital of hospitals">
-      <ng-template *ngIf="hospitals" carouselSlide>
+      <ng-template *ngIf="hospitals" carouselSlide [width]="250">
         <div class="card">
           <div class="hospital-card">
             <div class="card-body p-2">
-              <span class="bg-light w-50 p-1 ml-auto">{{
-                hospital.hospital
-              }}</span>
+              <span class="date ml-auto">{{ hospital.hospital }}</span>
               <h4 class="">{{ hospital.title }}</h4>
               <div class="details">
-                <a class="tel pb-2" href="{{ hospital.tel }}">
+                <a class="tel pb-2" href="tel:{{ hospital.tel }}">
                   <p>{{ hospital.tel }}</p>
                   <i class="fas fa-phone-square"></i>
                 </a>
@@ -58,7 +58,9 @@
   <img
     class="next"
     (click)="owlCar.next()"
-    src="../../../assets/icons/Group 19.png"
+    src="../../../assets/icons/Group 18.png"
     alt=""
   />
+
+  <div class="mob-overlay"></div>
 </div>

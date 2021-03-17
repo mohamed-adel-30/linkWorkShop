@@ -10,19 +10,23 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class CustomSliderComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     navSpeed: 700,
+    lazyLoad: true,
+    lazyLoadEager: 2,
+    autoWidth: false,
+
     items: 6,
     navText: ['', ''],
     // responsive: {
     //   0: {
-    //     items: 1,
+    //     items: 3,
     //   },
     //   600: {
-    //     items: 3,
+    //     items: 6,
     //   },
     // },
     nav: true,
